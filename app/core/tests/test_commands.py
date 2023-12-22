@@ -28,5 +28,5 @@ class CommandTests(SimpleTestCase):
         with patch("time.sleep"):
             call_command("wait_for_db")
 
-        self.assertEquals(check.call_count, 6)
+        self.assertEqual(check.call_count, 6)
         check.assert_called_with(databases=['default'])
